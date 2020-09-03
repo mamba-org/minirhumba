@@ -1,0 +1,13 @@
+{% set version = os.environ.get("MINIRHUMBA_VERSION", "0.0.1") %}
+{% set name = os.environ.get("MINIRHUMBA_NAME", "minirhumba") %}
+
+name: {{ name }}
+version: {{ version }}
+
+channels:
+  - https://conda.anaconda.org/conda-forge
+
+license_file: ../LICENSE
+
+specs:
+  - rhumba
