@@ -9,7 +9,9 @@ CONSTRUCT_ROOT="${CONSTRUCT_ROOT:-/construct}"
 cd $CONSTRUCT_ROOT
 
 echo "***** Install constructor *****"
+conda install -c conda-forge conda-standalone
 python -m pip install https://github.com/conda/constructor/archive/master.zip
+conda list
 
 echo "***** Make temp directory *****"
 TEMP_DIR=$(mktemp -d)
