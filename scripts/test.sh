@@ -18,7 +18,7 @@ chmod +x $INSTALLER_PATH
 bash $INSTALLER_PATH -b -p $RHUMBA_PATH
 
 echo "***** Setup conda *****"
-bash R
+source $CONDA_PATH/bin/activate
 
 echo "***** Print conda info *****"
 conda info
