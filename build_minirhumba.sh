@@ -18,7 +18,7 @@ docker run --rm --privileged multiarch/qemu-user-static:register --reset --crede
 echo "============= Install dependencies ============="
 echo "Installing a fresh version of Miniforge3 to build the rhumba environment."
 MINIFORGE_URL="https://github.com/conda-forge/miniforge/releases/download/4.8.3-1"
-MINIFORGE_FILE="Miniforge3-4.8.3-1-MacOSX-x86_64.sh"
+MINIFORGE_FILE="Miniforge3-4.8.3-1-linux-x86_64.sh"
 
 curl -L -O "${MINIFORGE_URL}/${MINIFORGE_FILE}"
 bash $MINIFORGE_FILE -b
