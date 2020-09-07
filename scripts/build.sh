@@ -9,7 +9,7 @@ CONSTRUCT_ROOT="${CONSTRUCT_ROOT:-/construct}"
 cd $CONSTRUCT_ROOT
 
 echo "***** Install constructor *****"
-conda install -y -c conda-forge conda-standalone jinja2
+conda install -y -c conda-forge conda-standalone jinja2 R
 python -m pip install https://github.com/conda/constructor/archive/master.zip
 conda list
 
@@ -37,3 +37,4 @@ mv $INSTALLER_PATH $CONSTRUCT_ROOT/build/
 mv $HASH_PATH $CONSTRUCT_ROOT/build/
 
 echo "***** Done: Building minirhumba installer *****"
+	
