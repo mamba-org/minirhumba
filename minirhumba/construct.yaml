@@ -7,6 +7,8 @@ version: {{ version }}
 channels:
   - https://conda.anaconda.org/conda-forge
 
+keep_pkgs: True
+
 license_file: ../LICENSE
 
 specs:
