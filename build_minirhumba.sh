@@ -10,12 +10,24 @@ DOCKERIMAGE=${DOCKERIMAGE:-condaforge/linux-anvil-aarch64}
 echo "============= Create build directory ============="
 mkdir -p build/
 chmod 777 build/
+ls
 
 echo "============= Enable QEMU ============="
 docker run --rm --privileged multiarch/qemu-user-static:register --reset --credential yes
 
+echo "============= Install dependencies ============="
+echo "Installing a fresh version of Miniforge3 to build the rhumba environment."
+MINIFORGE_URL="https://github.com/conda-forge/miniforge/releases/download/4.8.3-1"
+MINIFORGE_FILE="Miniforge3-4.8.3-1-linux-x86_64.sh"
+
+curl -L -O "${MINIFORGE_URL}/${MINIFORGE_FILE}"
+bash $MINIFORGE_FILE -b
+
+echo "Configuring conda."
+source ~/miniforge3/bin/activate root
+
 echo "============= Build the installer ============="
-docker run --rm -ti -v $(pwd):/construct -e MINIRHUMBA_VERSION -e MINIRHUMBA_NAME $DOCKERIMAGE /construct/scripts/build.sh
+docker run --rm -ti -v $(pwd):/construct -e MINIFORGE_VERSION -e MINIFORGE_NAME $DOCKERIMAGE /construct/scripts/build.sh
 
 echo "============= Download QEMU static binaries ============="
 bash scripts/get_qemu.sh
