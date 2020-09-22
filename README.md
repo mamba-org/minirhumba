@@ -26,6 +26,10 @@ Only on Linux builds, after construction on Travis, the installer is tested agai
 - Ubuntu 18.04
 - Ubuntu 19.10
 
+## Usage
+
+`bash your_minirhumba_file.sh`
+
 ## Release
 
 To release a new version of Minirhumba:
