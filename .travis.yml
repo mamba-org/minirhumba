@@ -51,6 +51,6 @@ deploy:
     - "build/minirhumba*.sha256"
   file_glob: true
   on:
-  #   repo: conda-forge/minirhumba
+    repo: mamba-org/minirhumba
     tags: true
   skip_cleanup: true
