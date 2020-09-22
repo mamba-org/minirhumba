@@ -50,7 +50,7 @@ deploy:
     - "build/minirhumba*.sh"
     - "build/minirhumba*.sha256"
   file_glob: true
-  # on:
+  on:
   #   repo: conda-forge/minirhumba
-  #   tags: true
+    tags: true
   skip_cleanup: true
