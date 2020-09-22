@@ -42,4 +42,6 @@ To keep in mind: we're depending on a hard coded version of Miniconda and this m
 
 ## License
 
-[BSD 3-Clause](./LICENSE)
+We use a shared copyright model that enables all contributors to maintain the copyright on their contributions.
+
+This software is licensed under the BSD-3-Clause license. [BSD 3-Clause](./LICENSE)
