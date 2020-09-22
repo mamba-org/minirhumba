@@ -41,16 +41,16 @@ script:
   - cp build/$MINIRHUMBA_NAME-*-$OS_NAME-$ARCH.sh build/$MINIRHUMBA_NAME-$OS_NAME-$ARCH.sh
   - ls -alh build
 
-# deploy:
-#   provider: releases
-#   # Token from conda-forge-bot (run by isuruf)
-#   api_key:
-#     secure: lB9JNCDM1KM+tEhVDqrOpJgTUnWeu1rTr1nedhaivauUaLh3A/jM7bs7V/4/Rjr1qlOq2OPuHOLS32J4Oz14j3f2s1LuLCO9TizEvA2RDQv/m6mfvCd/VfLF73y6oCY8qgPs6nk1c0cvTjCGe5o7rDAWDhezWOPME2+JxQUAzNH1dM52p+rzvNWFzZfYj0bmJNpuKfm0Q0nwOwUUkz23/m2BCra4dx+UU7Wc+JL2Zx77EMDQXHSUPQ+Bp1BMghUR8zC6Lizx2hCPFCtvehqPEdCAqO8wxWUZiUczylAhK2WK4DtvJBnVzvUEy+7ez1SMzaGBamrM21wW/Gwmt/8u0ZwcbnYuFaVRgZObvYwdFGAl0G75ZEF8WEzeLsik/Hf7Q0nygAC+60s0rbxHlX9WTRVthSS1wr6awOS0PsK0QLZPACEBTCT7epUBrNSNWwGxdymj2/6pKqyj1OM1NUbq9PlJMcWcIDuWLizYNCijyqvX5wqcGSSyKa5+ad365fQIl45mN9rBv9cxvEjrHB4X6h9pW4DyYesN5CF6i2446SAP4zG8YwDp7rG092yNYuxix0GTlyWyI4Pd+QryhYYCFZqnv2ZXipGNrDtS/N2QVJOaR1k/pAZ6Fd1m1bK6pfG5DSEoLFpu+ckITVfJslIR9BEdmZuyEuF26tHjagr2Itg=
-#   file:
-#     - "build/minirhumba*.sh"
-#     - "build/minirhumba*.sha256"
-#   file_glob: true
-#   on:
-#     repo: conda-forge/rhumba
-#     tags: true
-#   skip_cleanup: true
+deploy:
+  provider: releases
+  # Token from marimeireles (run by marimeireles)
+  api_key:
+    secure: PEWpTbPGwG2NzUS56QKKshwW8z9S+5akxoGrKCCp3J4vHpZBZcg2zl7+8daVX02jlq6KCuc7EpLM48fxA+T1hC486LKZrlHrixqIFcC05sZx1P8KMFL52ZgHArfW7V9v7P6zf1s6YCvPkeScQcCvx8Y+R6WtqI6vUor/zxiLfk58tdJQRkLm+SXwki0GolLkp3ZYJIHTdubDsmulx1XvschmignBYcQKYcnoKuLCz0LJbcy6Ua5xsfzGqBpHxBggwihuqDwgw4/3kXYgx+cMc/O1MV1eapdOWZZ41ZQm2vBZNVUwFOHNmr8XA/GhmFoXZPHKL39OI2/u3yqgWPGXNWn+eK2aEhKad493/aUIoJJNmD//+sd42f9Z5JynUox6Yf/d60oHfjQgsB4By+ill5NRmzUZR2EHqb7cnBHpEgbubkbjJH39DoB9D7xFI3+5W61xg6vJybCuJyAJGinc7FJ0Bq1UL+ni/7YQ3HGRH1P8gxbgcOGw461fUHXS+6yUtFYI5Hbrgd23Yz264ET6jQPlQ4I68FbNbbulQVVUP+J3NMEwHYGEb6zPpZ0yiVu0X7kfMEFLIurmO91OWv0sCP7Gh68sUbirsIdThT1Tl8HJPofrXUvGx+IQWxcWVrf8GGV1kb7G1261aftLHF6rb4CXagwzdPZ0Ee44hu/JElM=
+  file:
+    - "build/minirhumba*.sh"
+    - "build/minirhumba*.sha256"
+  file_glob: true
+  # on:
+  #   repo: conda-forge/minirhumba
+  #   tags: true
+  skip_cleanup: true
