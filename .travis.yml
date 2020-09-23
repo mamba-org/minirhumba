@@ -8,13 +8,13 @@ matrix:
         - MINIRHUMBA_NAME="minirhumba"
         - OS_NAME="MacOSX"
 
-   - os: linux
-     env:
-       - ARCH=aarch64
-       - DOCKER_ARCH=arm64v8
-       - DOCKERIMAGE=condaforge/linux-anvil-aarch64
-       - MINIRHUMBA_NAME="minirhumba"
-       - OS_NAME="Linux"
+    - os: linux
+      env:
+      - ARCH=aarch64
+      - DOCKER_ARCH=arm64v8
+      - DOCKERIMAGE=condaforge/linux-anvil-aarch64
+      - MINIRHUMBA_NAME="minirhumba"
+      - OS_NAME="Linux"
 
     - os: linux
       env:
