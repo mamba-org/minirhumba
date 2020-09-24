@@ -8,6 +8,9 @@ version: {{ version }}
 channels:
   - https://conda.anaconda.org/conda-forge
 
+conda_default_channels:
+  - https://conda.anaconda.org/conda-forge
+
 keep_pkgs: True
 ignore_duplicate_files: True
 
