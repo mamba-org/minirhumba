@@ -24,14 +24,13 @@ matrix:
         - MINIRHUMBA_NAME="minirhumba"
         - OS_NAME="Linux"
 
-#    - os: linux
-#      env:
-#        - ARCH=ppc64le
-#        - DOCKER_ARCH=ppc64le
-#        - DOCKERIMAGE=condaforge/linux-anvil-ppc64le
-#        - MINIRHUMBA_NAME="minirhumba"
-#        - OS_NAME="Linux"
-#
+   - os: linux
+     env:
+       - ARCH=ppc64le
+       - DOCKER_ARCH=ppc64le
+       - DOCKERIMAGE=condaforge/linux-anvil-ppc64le
+       - MINIRHUMBA_NAME="minirhumba"
+       - OS_NAME="Linux"
 
 script:
   - if [[ "$TRAVIS_TAG" != "" ]]; then export MINIRHUMBA_VERSION=$TRAVIS_TAG; fi
