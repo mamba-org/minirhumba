@@ -13,8 +13,8 @@ Minirhumba installers are available here: https://github.com/mamba-org/minirhumb
 
 Lastest installers:
 
-- [linux-x86_64](https://github.com/mamba-org/minirhumba/releases/download/0.0.2/minirhumba-0.0.2-Linux-x86_64.sh)
-- [osx-x86_64](https://github.com/mamba-org/minirhumba/releases/download/0.0.2/minirhumba-0.0.2-MacOSX-x86_64.sh)
+- [linux-x86_64 0.0.4](https://github.com/mamba-org/minirhumba/releases/download/0.0.2/minirhumba-0.0.4-Linux-x86_64.sh)
+- [osx-x86_64 0.0.4](https://github.com/mamba-org/minirhumba/releases/download/0.0.4/minirhumba-0.0.4-MacOSX-x86_64.sh)
 
 ## Testing
 
