@@ -6,7 +6,6 @@ set -x
 echo "Installing a fresh version of Miniforge3 to build the rhumba environment."
 MINIFORGE_URL="https://github.com/conda-forge/miniforge/releases/download/4.8.3-1"
 MINIFORGE_FILE="Miniforge3-4.8.3-1-MacOSX-x86_64.sh"
-
 curl -L -O "${MINIFORGE_URL}/${MINIFORGE_FILE}"
 bash $MINIFORGE_FILE -b
 
@@ -17,4 +16,6 @@ export CONSTRUCT_ROOT=$PWD
 mkdir -p build
 
 bash scripts/build.sh
-bash scripts/test.sh
+if [[ "$ARCH" == "$(uname -m)" ]]; then
+  bash scripts/test.sh
+fi
