@@ -1,16 +1,14 @@
 # .sh version
-{% set version = os.environ.get("MINIRHUMBA_VERSION", "0.0.4") %}
+{% set version = os.environ.get("MINIRHUMBA_VERSION", "0.1.0") %}
 {% set name = os.environ.get("MINIRHUMBA_NAME", "minirhumba") %}
 
 name: {{ name }}
 version: {{ version }}
 
 channels:
-  - https://conda.anaconda.org/conda-forge
+  - conda-forge
 
-conda_default_channels:
-  - https://conda.anaconda.org/conda-forge
-
+write_condarc: True
 keep_pkgs: True
 ignore_duplicate_files: True
 
