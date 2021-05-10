@@ -14,10 +14,10 @@ jobs:
             MINIFORGE_NAME: "minirhumba"
             OS_NAME: "Windows"
 
-          #- os: macos-latest
-          #  ARCH: arm64
-          #  MINIFORGE_NAME: "minirhumba"
-          #  OS_NAME: "MacOSX"
+          - os: macos-latest
+            ARCH: arm64
+            MINIFORGE_NAME: "minirhumba"
+            OS_NAME: "MacOSX"
 
           - os: macos-latest
             ARCH: x86_64
