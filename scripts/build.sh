@@ -11,15 +11,16 @@ cd $CONSTRUCT_ROOT
 # Constructor should be latest for non-native building
 # See https://github.com/conda/constructor
 echo "***** Install constructor *****"
-conda install mamba -c conda-forge
-mamba install -y "constructor>=3.1.0" jinja2 -c conda-forge -c defaults --override-channels
+conda install -y "constructor>=3.1.0" jinja2 curl libarchive -c conda-forge --override-channels
+
 if [[ "$(uname)" == "Darwin" ]]; then
-    mamba install -y coreutils -c conda-forge -c defaults --override-channels
-elif [[ "$(uname)" == MINGW* ]]; then
-    mamba install -y "nsis=3.01" -c conda-forge -c defaults --override-channels
+    conda install -y coreutils -c conda-forge --override-channels
 fi
-pip install git+git://github.com/conda/constructor@8c0121d3b81846de42973b52f13135f0ffeaddda#egg=constructor --force --no-deps
-mamba list
+if [[ "$TARGET_PLATFORM" == win-* ]]; then
+    conda install -y "nsis=3.01" -c conda-forge --override-channels
+fi
+pip install git+git://github.com/wolfv/constructor@69eaa20b12ea1020438f645ec834f47ac9d3c3a7#egg=constructor --force --no-deps
+conda list
 
 echo "***** Make temp directory *****"
 if [[ "$(uname)" == MINGW* ]]; then
@@ -34,12 +35,21 @@ cp LICENSE $TEMP_DIR/
 
 ls -al $TEMP_DIR
 
-if [[ $(uname -r) != "$ARCH" ]]; then
-    if [[ "$ARCH" == "arm64" ]]; then
-        CONDA_SUBDIR=osx-arm64 mamba create -n micromamba micromamba=0.11.3 -c conda-forge --yes
-        EXTRA_CONSTRUCTOR_ARGS="$EXTRA_CONSTRUCTOR_ARGS --conda-exe $CONDA_PREFIX/envs/micromamba/bin/micromamba --platform osx-arm64"
-    fi
+MICROMAMBA_VERSION=0.13.0
+mkdir $TEMP_DIR/micromamba
+pushd $TEMP_DIR/micromamba
+curl -L -O https://anaconda.org/conda-forge/micromamba/$MICROMAMBA_VERSION/download/$TARGET_PLATFORM/micromamba-$MICROMAMBA_VERSION-0.tar.bz2
+bsdtar -xf micromamba-$MICROMAMBA_VERSION-0.tar.bz2
+if [[ "$TARGET_PLATFORM" == win-* ]]; then
+  MICROMAMBA_FILE=$PWD/Library/bin/micromamba.exe
+else
+  MICROMAMBA_FILE=$PWD/bin/micromamba
 fi
+popd
+EXTRA_CONSTRUCTOR_ARGS="$EXTRA_CONSTRUCTOR_ARGS --conda-exe $MICROMAMBA_FILE --platform $TARGET_PLATFORM"
+
+echo "***** Construct the installer *****"
+constructor $TEMP_DIR/Miniforge3/ --output-dir $TEMP_DIR $EXTRA_CONSTRUCTOR_ARGS
 
 echo "***** Construct the installer *****"
 constructor $TEMP_DIR/minirhumba/ --output-dir $TEMP_DIR $EXTRA_CONSTRUCTOR_ARGS
