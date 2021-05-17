@@ -49,9 +49,6 @@ popd
 EXTRA_CONSTRUCTOR_ARGS="$EXTRA_CONSTRUCTOR_ARGS --conda-exe $MICROMAMBA_FILE --platform $TARGET_PLATFORM"
 
 echo "***** Construct the installer *****"
-constructor $TEMP_DIR/Miniforge3/ --output-dir $TEMP_DIR $EXTRA_CONSTRUCTOR_ARGS
-
-echo "***** Construct the installer *****"
 constructor $TEMP_DIR/minirhumba/ --output-dir $TEMP_DIR $EXTRA_CONSTRUCTOR_ARGS
 
 echo "***** Generate installer hash *****"
