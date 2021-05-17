@@ -13,12 +13,12 @@ Minirhumba installers are available here: https://github.com/mamba-org/minirhumb
 
 Lastest installers:
 
-- [minirhumba-0.1.1-Linux-aarch64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Linux-aarch64.sh)
-- [minirhumba-0.1.1-Linux-ppc64le.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Linux-ppc64le.sh)
-- [minirhumba-0.1.1-Linux-x86_64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Linux-x86_64.sh)
-- [minirhumba-0.1.1-MacOSX-arm64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Linux-x86_64.sh)
-- [minirhumba-0.1.1-MacOSX-x86_64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-MacOSX-x86_64.sh)
-- [minirhumba-0.1.1-Windows-x86_64.exe](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Windows-x86_64.exe)
+- [minirhumba-0.1.2-Linux-aarch64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.2/minirhumba-0.1.2-Linux-aarch64.sh)
+- [minirhumba-0.1.2-Linux-ppc64le.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.2/minirhumba-0.1.2-Linux-ppc64le.sh)
+- [minirhumba-0.1.2-Linux-x86_64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.2/minirhumba-0.1.2-Linux-x86_64.sh)
+- [minirhumba-0.1.2-MacOSX-arm64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.2/minirhumba-0.1.2-Linux-x86_64.sh)
+- [minirhumba-0.1.2-MacOSX-x86_64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.2/minirhumba-0.1.2-MacOSX-x86_64.sh)
+- [minirhumba-0.1.2-Windows-x86_64.exe](https://github.com/mamba-org/minirhumba/releases/download/0.1.2/minirhumba-0.1.2-Windows-x86_64.exe)
 
 ## Usage
 
