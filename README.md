@@ -2,8 +2,8 @@
 
 [![Build Status](https://travis-ci.com/mamba-org/minirhumba.svg?branch=master)](https://travis-ci.com/mamba-org/minirhumba)
 
-This repository holds a minimal installer for minirhumba.
-Minirhumba comes from [rhumba](https://github.com/mamba-org/rhumba), which are R bindings for micromamba. Rhumba works like CRAN but is blazingly fast ⚡.
+This repository holds a minimal installer for [Rhumba](https://github.com/mamba-org/rhumba).
+Rhumba works like CRAN but is blazingly fast ⚡.
 
 ## Download
 
@@ -13,8 +13,28 @@ Minirhumba installers are available here: https://github.com/mamba-org/minirhumb
 
 Lastest installers:
 
-- [linux-x86_64 0.0.4](https://github.com/mamba-org/minirhumba/releases/download/0.0.2/minirhumba-0.0.4-Linux-x86_64.sh)
-- [osx-x86_64 0.0.4](https://github.com/mamba-org/minirhumba/releases/download/0.0.4/minirhumba-0.0.4-MacOSX-x86_64.sh)
+- [minirhumba-0.1.1-Linux-aarch64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Linux-aarch64.sh)
+- [minirhumba-0.1.1-Linux-ppc64le.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Linux-ppc64le.sh)
+- [minirhumba-0.1.1-Linux-x86_64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Linux-x86_64.sh)
+- [minirhumba-0.1.1-MacOSX-arm64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Linux-x86_64.sh)
+- [minirhumba-0.1.1-MacOSX-x86_64.sh](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-MacOSX-x86_64.sh)
+- [minirhumba-0.1.1-Windows-x86_64.exe](https://github.com/mamba-org/minirhumba/releases/download/0.1.1/minirhumba-0.1.1-Windows-x86_64.exe)
+
+## Usage
+
+To install Rhumba, choose your installer and run it with the command:
+
+```
+bash your_minirhumba_file.sh
+```
+
+Note: `Rhumba` is only available by default on the base environment, if the base environment is not active in your terminal type:
+
+```
+conda activate base
+```
+
+To start the base environment.
 
 ## Testing
 
@@ -25,20 +45,6 @@ Only on Linux builds, after construction on Travis, the installer is tested agai
 - Ubuntu 16.04
 - Ubuntu 18.04
 - Ubuntu 19.10
-
-## Usage
-
-`bash your_minirhumba_file.sh`
-
-## Release
-
-To release a new version of Minirhumba:
-
-- Make a new release of rhumba
-- Tag a new version
-- Run `.travis.yml`
-
-To keep in mind: we're depending on a hard coded version of Miniconda and this may cause problems in the future. It's important to keep it somewhat updated.
 
 ## License
 
