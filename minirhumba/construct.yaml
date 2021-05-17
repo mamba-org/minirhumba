@@ -1,5 +1,6 @@
 # .sh version
-{% set version = os.environ.get("MINIRHUMBA_VERSION", "0.1.1") %}
+{% set version = os.environ.get("MINIRHUMBA_VERSION", "0.1.3") %}
+{% set rhumba_version = os.environ.get("MINIRHUMBA_VERSION", "0.1.1") %}
 {% set name = os.environ.get("MINIRHUMBA_NAME", "minirhumba") %}
 
 name: {{ name }}
@@ -16,4 +17,4 @@ license_file: ../LICENSE
 
 specs:
   - conda
-  - rhumba ={{ version }}
+  - rhumba ={{ rhumba_version }}
